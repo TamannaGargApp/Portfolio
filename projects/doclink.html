@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocLink | Tamanna Garg</title>
+  <meta name="description" content="DocLink: an AI-powered document management and client engagement platform with a RAG chatbot built on LangChain, Qdrant and a local Qwen LLM." />
+  <meta name="author" content="Tamanna Garg" />
+  <meta property="og:title" content="DocLink | Tamanna Garg" />
+  <meta property="og:description" content="AI-powered document management and client engagement platform with a RAG chatbot." />
+  <meta property="og:type" content="article" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container nav-row">
+      <a href="../index.html" class="brand">
+        <span class="brand-mark">TG</span>
+        <span class="brand-name">Tamanna Garg</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html#contact" class="icon-btn" aria-label="Contact">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container detail-hero">
+        <a href="../index.html#work" class="back-link">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          All projects
+        </a>
+        <div class="detail-hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Featured project · AI/ML Consultant at Harshwal &amp; Company LLP</p>
+            <h1 class="display detail-title">DOC<span class="accent">LINK</span></h1>
+            <p class="detail-tagline">AI-powered document management &amp; client engagement platform</p>
+            <p class="lead">
+              A professional platform for accounting, legal and consulting firms to collect, manage and discuss client documents in one place, with an AI assistant that answers questions straight from the uploaded files and cites its sources.
+            </p>
+            <div class="hero-ctas">
+              <a href="#ai-assistant" class="btn btn-dark">
+                How the AI works
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+              </a>
+              <span class="private-note"><svg class="icon" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Office project, code not public</span>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="visual visual-doclink detail-visual" aria-hidden="true">
+              <div class="vd-window">
+                <div class="vd-bar"><i></i><i></i><i></i><span>DocLink Assistant</span></div>
+                <div class="vd-body">
+                  <div class="vd-docs">
+                    <div class="vd-doc"><b>PDF</b> audit_report_2024.pdf</div>
+                    <div class="vd-doc"><b>XLS</b> financials.xlsx</div>
+                    <div class="vd-doc"><b>DOC</b> engagement_letter.docx</div>
+                  </div>
+                  <div class="vd-chat">
+                    <div class="vd-msg vd-user">What are the key findings in the audit report?</div>
+                    <div class="vd-msg vd-ai">The report highlights three findings, starting with gaps in expense documentation. <span class="vd-cite">[audit_report_2024.pdf, p.5]</span></div>
+                    <div class="vd-msg vd-user">Which of them is high priority?</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blob blob-hero"></div>
+    </section>
+
+    <!-- KEY NUMBERS -->
+    <section class="container stats reveal" aria-label="Key numbers">
+      <div class="stat"><p class="stat-num">2 GB</p><p class="stat-label">max file size, uploaded in 10 MB chunks</p></div>
+      <div class="stat"><p class="stat-num">40+</p><p class="stat-label">supported file types with automatic detection</p></div>
+      <div class="stat"><p class="stat-num">5</p><p class="stat-label">user roles, from Super Admin to Client</p></div>
+      <div class="stat"><p class="stat-num">Multi-firm</p><p class="stat-label">tenant isolation across every AI search</p></div>
+    </section>
+
+    <!-- OVERVIEW + ROLE -->
+    <section class="container section">
+      <div class="detail-two">
+        <div class="reveal">
+          <p class="eyebrow">The problem</p>
+          <h2 class="detail-h2">Document collection is slow, scattered and hard to audit.</h2>
+          <p class="muted">
+            Service firms spend a lot of time chasing clients for documents over email, tracking what has arrived, and searching through files to answer questions. DocLink centralizes that work: firms create engagements, send organized document requests, review and approve submissions, and keep a full audit trail for compliance. Clients get a self-service portal to upload files and follow progress in real time.
+          </p>
+        </div>
+        <div class="role-card reveal">
+          <p class="eyebrow">My role</p>
+          <ul class="job-points">
+            <li>Implemented the RAG components: text extraction, document chunking, embeddings, Qdrant vector search and contextual retrieval.</li>
+            <li>Built document-grounded Q&amp;A with conversation memory and source citations for every answer.</li>
+            <li>Integrated the AI features with the Flask backend, MongoDB and AWS S3.</li>
+            <li>Supported large-file workflows up to 2 GB per file.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI ASSISTANT -->
+    <section id="ai-assistant" class="container section">
+      <p class="eyebrow">AI assistant</p>
+      <h2 class="detail-h2 reveal">How the document chatbot answers questions</h2>
+      <p class="muted detail-intro reveal">
+        The assistant combines Retrieval-Augmented Generation (RAG) with a Context-Augmented Generation (CAG) layer. RAG finds the right passages in the firm's documents, and CAG keeps track of the conversation so follow-up questions like "which of them is high priority?" still make sense. Everything runs on local models, so client documents never leave the firm's infrastructure.
+      </p>
+
+      <div class="pipeline-grid">
+        <div class="pipeline-card reveal">
+          <h3>1 · Ingestion pipeline</h3>
+          <ol class="pipe">
+            <li>Upload stored in S3, metadata saved in MongoDB</li>
+            <li>Text extracted from PDF, DOCX, XLSX, TXT and more</li>
+            <li>Split into overlapping chunks with LangChain</li>
+            <li>Embedded with all-MiniLM-L6-v2 (384 dimensions)</li>
+            <li>Stored in Qdrant with firm, engagement and document IDs</li>
+          </ol>
+        </div>
+        <div class="pipeline-card reveal">
+          <h3>2 · Understanding the question</h3>
+          <ol class="pipe">
+            <li>Conversation memory keeps the last few turns</li>
+            <li>Query rewriting resolves "it", "this" and "they"</li>
+            <li>Intent detected: search, summary, comparison, how-to…</li>
+            <li>LLM intent classifier routes to database tools first</li>
+            <li>Pattern matching, then RAG, as fallbacks</li>
+          </ol>
+        </div>
+        <div class="pipeline-card reveal">
+          <h3>3 · Grounded answer</h3>
+          <ol class="pipe">
+            <li>Filtered vector search, always scoped to the firm</li>
+            <li>Low-relevance chunks dropped by a score threshold</li>
+            <li>Prompt built from document excerpts and conversation context</li>
+            <li>Local Qwen LLM generates the answer</li>
+            <li>Sources returned with document name and page</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="ai-highlights">
+        <div class="hl reveal"><p class="hl-title">Private by design</p><p class="muted small">Local Hugging Face models (Qwen and sentence-transformers) mean no external API calls and no per-request cost.</p></div>
+        <div class="hl reveal"><p class="hl-title">Tenant isolation</p><p class="muted small">Every vector search is filtered by firm, so one firm's documents can never appear in another firm's answers.</p></div>
+        <div class="hl reveal"><p class="hl-title">Document-aware UI</p><p class="muted small">A floating chat widget that works across an engagement or a single document, with clickable source citations.</p></div>
+        <div class="hl reveal"><p class="hl-title">Batch processing</p><p class="muted small">Process a single document or every file in an engagement, and generate AI insights for the engagement.</p></div>
+      </div>
+    </section>
+
+    <!-- PLATFORM FEATURES -->
+    <section class="container section">
+      <p class="eyebrow">Platform features</p>
+      <div class="feature-grid">
+        <div class="feature reveal"><h3>Engagement management</h3><p class="muted small">Create client engagements, track status from Pending to Completed, assign team members and manage due dates.</p></div>
+        <div class="feature reveal"><h3>Document requests</h3><p class="muted small">Hierarchical categories, priority levels, approval workflows and comment threads on every request.</p></div>
+        <div class="feature reveal"><h3>Client portal</h3><p class="muted small">Self-service dashboard where clients upload documents, track request status and download approved reports.</p></div>
+        <div class="feature reveal"><h3>E-signature</h3><p class="muted small">Prepare documents for signing, then let clients or guests sign through a secure link.</p></div>
+        <div class="feature reveal"><h3>Assessment hub</h3><p class="muted small">Create assessments, prepare them internally and collect client submissions with document annotations.</p></div>
+        <div class="feature reveal"><h3>Reports</h3><p class="muted small">Generate reports, share them for client review and give external reviewers guest access.</p></div>
+        <div class="feature reveal"><h3>Automation rules</h3><p class="muted small">Trigger-based actions for status changes and notifications across engagement workflows.</p></div>
+        <div class="feature reveal"><h3>Super admin portal</h3><p class="muted small">Manage multiple firms from one dashboard, with cross-firm analytics and an act-as-admin mode.</p></div>
+        <div class="feature reveal"><h3>Notifications &amp; activity</h3><p class="muted small">Real-time notifications, a filterable activity timeline and comment badges with live refresh.</p></div>
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section class="container section">
+      <div class="about-card reveal">
+        <div>
+          <p class="eyebrow">Security &amp; compliance</p>
+          <h2 class="detail-h2">Built for firms that handle sensitive client data.</h2>
+          <p class="muted">Access is controlled by five roles (Super Admin, Admin, Manager, Staff and Client), and every important action is written to an audit log.</p>
+        </div>
+        <ul class="check-list">
+          <li>Two-factor authentication with TOTP</li>
+          <li>Account lockout after 5 failed logins</li>
+          <li>Session tokens validated on every request</li>
+          <li>Configurable inactivity timeout</li>
+          <li>Fresh login required for sensitive actions</li>
+          <li>scrypt / bcrypt password hashing</li>
+          <li>CSRF protection and HTTPOnly cookies</li>
+          <li>Comprehensive audit logging</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="container section">
+      <p class="eyebrow">Tech stack</p>
+      <div class="skill-groups">
+        <div class="skill-group reveal"><h3>Backend</h3><ul class="tags"><li>Python</li><li>Flask 3.0</li><li>Jinja2</li><li>Flask-Mail</li></ul></div>
+        <div class="skill-group reveal"><h3>Data &amp; storage</h3><ul class="tags"><li>MongoDB</li><li>MongoEngine</li><li>AWS S3</li></ul></div>
+        <div class="skill-group reveal"><h3>AI / ML</h3><ul class="tags"><li>LangChain</li><li>Qwen (local LLM)</li><li>Hugging Face Transformers</li><li>Sentence Transformers</li><li>PyTorch</li></ul></div>
+        <div class="skill-group reveal"><h3>Retrieval</h3><ul class="tags"><li>Qdrant</li><li>all-MiniLM-L6-v2</li><li>RAG</li><li>CAG</li></ul></div>
+        <div class="skill-group reveal"><h3>Document processing</h3><ul class="tags"><li>PyMuPDF</li><li>pypdf</li><li>python-docx</li><li>python-pptx</li><li>openpyxl</li><li>Tesseract OCR</li></ul></div>
+        <div class="skill-group reveal"><h3>Frontend &amp; security</h3><ul class="tags"><li>Bootstrap 5.3</li><li>JavaScript</li><li>PyOTP</li><li>bcrypt</li><li>Flask-WTF</li></ul></div>
+      </div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="container section contact">
+      <div class="next-card reveal">
+        <div>
+          <p class="eyebrow">Interested in something similar?</p>
+          <h2 class="display contact-title">LET'S BUILD IT <span class="accent">TOGETHER</span></h2>
+        </div>
+        <div class="hero-ctas">
+          <a href="mailto:Tamannagarg1304@gmail.com" class="btn btn-dark">
+            Get in touch
+            <svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+          <a href="../index.html#work" class="btn btn-ghost">See other projects</a>
+        </div>
+      </div>
+      <div class="blob blob-contact"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year">2026</span> Tamanna Garg. All rights reserved.</p>
+      <p>Designed &amp; built with intent.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

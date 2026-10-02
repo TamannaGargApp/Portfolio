@@ -326,3 +326,75 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (min-width: 1024px) {
   .hero-title { font-size: 4.5rem; }
 }
+
+/* ===== Project card links ===== */
+.project-links { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.project-links .btn { padding: 0.6rem 1.1rem; font-size: 0.8rem; }
+
+/* ===== Project detail page ===== */
+.detail-hero { position: relative; z-index: 1; padding-top: 2rem; padding-bottom: 5rem; }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--muted-foreground); margin-bottom: 2.5rem; }
+.back-link:hover { color: var(--foreground); }
+.detail-hero-grid { display: grid; gap: 3rem; align-items: center; }
+.detail-title { font-size: 3.5rem; }
+.detail-tagline { margin-top: 1rem; font-size: 1.15rem; font-weight: 500; }
+.detail-hero .lead { margin-top: 1.25rem; max-width: 34rem; }
+.detail-visual { min-height: 320px; }
+.detail-h2 { font-weight: 700; font-size: 1.75rem; line-height: 1.2; margin-bottom: 1rem; }
+.detail-intro { max-width: 46rem; }
+.detail-two { display: grid; gap: 2rem; align-items: start; }
+.role-card { border: 1px solid var(--border); background: var(--card); border-radius: 1.5rem; padding: 1.75rem; }
+.role-card .eyebrow { margin-bottom: 0.5rem; }
+.pipeline-grid { margin-top: 2rem; display: grid; gap: 1rem; }
+.pipeline-card { border: 1px solid var(--border); background: var(--card); border-radius: 1.25rem; padding: 1.5rem; }
+.pipeline-card h3 { font-size: 1.05rem; font-weight: 700; }
+.pipe { margin: 1rem 0 0; padding: 0; list-style: none; counter-reset: pipe; }
+.pipe li { position: relative; padding: 0 0 0.9rem 2rem; font-size: 0.875rem; color: var(--muted-foreground); line-height: 1.5; counter-increment: pipe; }
+.pipe li::before {
+  content: counter(pipe); position: absolute; left: 0; top: 0;
+  width: 1.35rem; height: 1.35rem; border-radius: 50%;
+  background: var(--lavender-soft); color: oklch(0.35 0.12 295);
+  font-size: 0.7rem; font-weight: 600; display: flex; align-items: center; justify-content: center;
+}
+.pipe li:not(:last-child)::after { content: ""; position: absolute; left: 0.64rem; top: 1.5rem; bottom: 0.15rem; width: 1.5px; background: var(--lavender); }
+.pipe li:last-child { padding-bottom: 0; }
+.ai-highlights { margin-top: 1rem; display: grid; gap: 1rem; }
+.hl { border-radius: 1.25rem; padding: 1.25rem; background: var(--lavender-soft); }
+.hl-title { font-weight: 600; margin-bottom: 0.35rem; }
+.feature-grid { display: grid; gap: 1rem; }
+.feature { border: 1px solid var(--border); background: var(--card); border-radius: 1.25rem; padding: 1.25rem; }
+.feature h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+.check-list { display: grid; gap: 0.65rem; }
+.check-list li { position: relative; padding-left: 1.75rem; font-size: 0.9rem; }
+.check-list li::before {
+  content: "✓"; position: absolute; left: 0; top: 0.05rem;
+  width: 1.2rem; height: 1.2rem; border-radius: 50%; background: var(--mint); color: oklch(0.4 0.12 155);
+  font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.next-card { position: relative; z-index: 1; display: grid; gap: 2rem; align-items: end; }
+.next-card .contact-title { font-size: 2.5rem; }
+
+@media (min-width: 640px) {
+  .ai-highlights { grid-template-columns: repeat(2, 1fr); }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .check-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 768px) {
+  .detail-hero-grid, .detail-two { grid-template-columns: 1fr 1fr; }
+  .detail-title { font-size: 5rem; }
+  .detail-h2 { font-size: 2.25rem; }
+  .pipeline-grid { grid-template-columns: repeat(3, 1fr); }
+  .feature-grid { grid-template-columns: repeat(3, 1fr); }
+  .ai-highlights { grid-template-columns: repeat(4, 1fr); }
+  .next-card { grid-template-columns: 1.4fr 1fr; }
+  .next-card .contact-title { font-size: 3.5rem; }
+  .next-card .hero-ctas { justify-content: flex-end; }
+}
+.private-note { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--muted-foreground); padding: 0.6rem 0.25rem; }
+
+/* About photo fills the card height on wide screens */
+@media (min-width: 768px) {
+  .about-card { align-items: stretch; }
+  .about-photo { position: relative; min-height: 460px; }
+  .about-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+}
