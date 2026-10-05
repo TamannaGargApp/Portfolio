@@ -97,6 +97,34 @@
     update();
   }
 
+  // Theme switcher: Light, Dark, or System (follows the device setting)
+  var root = document.documentElement;
+  var themeButtons = document.querySelectorAll("[data-theme-option]");
+
+  function savedTheme() {
+    try { return localStorage.getItem("theme") || "system"; } catch (e) { return "system"; }
+  }
+
+  function applyTheme(choice) {
+    if (choice === "light" || choice === "dark") root.setAttribute("data-theme", choice);
+    else root.removeAttribute("data-theme");
+    themeButtons.forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-theme-option") === choice));
+    });
+  }
+
+  themeButtons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var choice = b.getAttribute("data-theme-option");
+      try {
+        if (choice === "system") localStorage.removeItem("theme");
+        else localStorage.setItem("theme", choice);
+      } catch (e) {}
+      applyTheme(choice);
+    });
+  });
+  applyTheme(savedTheme());
+
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();
