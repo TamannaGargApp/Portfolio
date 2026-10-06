@@ -262,8 +262,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 .about-card { border: 1px solid var(--border); background: var(--card); border-radius: 1.5rem; padding: 1.5rem; display: grid; gap: 2.5rem; align-items: center; }
 .about-title { font-weight: 700; font-size: 1.875rem; line-height: 1.2; }
 .about-card .muted { margin-top: 1.5rem; }
-.about-photo { border-radius: 1rem; overflow: hidden; }
-.about-photo img { width: 100%; object-fit: cover; }
+.about-photo {
+  width: 220px; aspect-ratio: 1; margin: 0 auto; border-radius: 50%; overflow: hidden;
+  border: 6px solid var(--card); box-shadow: 0 0 0 2px var(--lavender), var(--shadow-soft);
+}
+.about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
 .edu { margin-top: 1.5rem; padding: 1rem 1.25rem; border-radius: 1rem; background: var(--lavender-soft); }
 .edu-title { font-weight: 600; margin-top: 0.25rem; }
 .edu .muted { margin-top: 0.1rem; }
@@ -401,9 +404,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* About photo fills the card height on wide screens */
 @media (min-width: 768px) {
-  .about-card { align-items: stretch; }
-  .about-photo { position: relative; min-height: 460px; }
-  .about-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+  .about-photo { width: 300px; }
 }
 
 /* ===== Section heading (numbered) ===== */
