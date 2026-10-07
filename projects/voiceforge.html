@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoiceForge | Tamanna Garg</title>
+  <meta name="description" content="VoiceForge: a full-stack AI text-to-speech and speech-to-text platform built with FastAPI, Edge TTS, faster-whisper, MongoDB and Docker." />
+  <meta name="author" content="Tamanna Garg" />
+  <meta property="og:title" content="VoiceForge | Tamanna Garg" />
+  <meta property="og:description" content="AI text-to-speech in 20 neural voices and offline speech-to-text with Whisper." />
+  <meta property="og:type" content="article" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script>
+    // Apply the saved theme before the page paints, so there is no flash.
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container nav-row">
+      <a href="../index.html" class="brand">
+        <span class="brand-mark">TG</span>
+        <span class="brand-name">Tamanna Garg</span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#journey">Journey</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="theme-switch" role="group" aria-label="Color theme">
+          <button type="button" data-theme-option="light" aria-pressed="false" aria-label="Light theme" title="Light">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
+          <button type="button" data-theme-option="dark" aria-pressed="false" aria-label="Dark theme" title="Dark">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+          <button type="button" data-theme-option="system" aria-pressed="true" aria-label="Use system theme" title="System">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </button>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="../index.html#contact" class="icon-btn" aria-label="Contact">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container detail-hero">
+        <a href="../index.html#work" class="back-link">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          All projects
+        </a>
+        <div class="detail-hero-grid">
+          <div class="reveal">
+            <p class="eyebrow">Full-stack AI project · Text-to-speech &amp; speech-to-text</p>
+            <h1 class="display detail-title">VOICE<span class="accent">FORGE</span></h1>
+            <p class="detail-tagline">AI text-to-speech &amp; speech-to-text platform</p>
+            <p class="lead">
+              A complete voice platform with accounts, a studio editor and history. Turn any text into natural speech with 20 neural voices in 6 languages, or record and upload audio and get an editable transcript back, transcribed offline with Whisper.
+            </p>
+            <div class="hero-ctas">
+              <a href="#how" class="btn btn-dark">
+                How it works
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+              </a>
+              <!-- Update if the repository name is different -->
+              <a href="https://github.com/TamannaGargApp/test-to-speech" target="_blank" rel="noopener" class="btn btn-ghost"><svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> View on GitHub</a>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="visual visual-tts detail-visual" aria-hidden="true">
+            <div class="tts-window">
+              <div class="vd-bar"><i></i><i></i><i></i><span>VoiceForge Studio</span></div>
+              <div class="tts-body">
+                <div class="tts-text">Welcome to VoiceForge. Type any text and hear it read aloud in a natural voice.</div>
+                <div class="tts-controls"><span class="on">Aria · EN-US</span><span>Speed 1.0×</span><span>Pitch 0</span><span>MP3</span></div>
+                <div class="tts-player"><span class="tts-play"><svg viewBox="0 0 24 24"><path d="M7 4v16l13-8z"/></svg></span><div class="wave"><i style="height:8px"></i><i style="height:14px"></i><i style="height:22px"></i><i style="height:12px"></i><i style="height:26px"></i><i style="height:18px"></i><i style="height:30px"></i><i style="height:16px"></i><i style="height:24px"></i><i style="height:10px"></i><i style="height:20px"></i><i style="height:28px"></i><i style="height:14px"></i><i style="height:22px"></i><i style="height:9px"></i><i style="height:18px"></i><i style="height:26px"></i><i style="height:12px"></i><i style="height:20px"></i><i style="height:15px"></i><i style="height:24px"></i><i style="height:11px"></i><i style="height:17px"></i><i style="height:8px"></i><i style="height:13px"></i><i style="height:21px"></i><i style="height:16px"></i><i style="height:10px"></i><i style="height:19px"></i><i style="height:12px"></i><i style="height:7px"></i><i style="height:14px"></i></div><span class="tts-time">0:06</span></div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="blob blob-hero"></div>
+    </section>
+
+    <!-- KEY NUMBERS -->
+    <section class="container stats reveal" aria-label="Key numbers">
+      <div class="stat"><p class="stat-num">20</p><p class="stat-label">neural voices, male and female</p></div>
+      <div class="stat"><p class="stat-num">6</p><p class="stat-label">languages: English, Hindi, Spanish, French, German, Japanese</p></div>
+      <div class="stat"><p class="stat-num">25 MB</p><p class="stat-label">audio uploads for transcription, 6 formats</p></div>
+      <div class="stat"><p class="stat-num">3</p><p class="stat-label">Docker containers: frontend, backend, MongoDB</p></div>
+    </section>
+
+    <!-- OVERVIEW + ROLE -->
+    <section class="container section">
+      <div class="detail-two">
+        <div class="reveal">
+          <p class="eyebrow">The idea</p>
+          <h2 class="detail-h2">Voice tools in both directions, in one place.</h2>
+          <p class="muted">
+            Most tools either read text aloud or transcribe speech, rarely both. VoiceForge does both and connects them: a transcript can be edited and sent straight to the Studio to be spoken again. Every user has their own account, and every generation and transcript is saved to their history.
+          </p>
+        </div>
+        <div class="role-card reveal">
+          <p class="eyebrow">What I built</p>
+          <ul class="job-points">
+            <li>A FastAPI backend with routes for auth, text-to-speech, speech-to-text and history.</li>
+            <li>Text-to-speech with Edge neural voices, speed and pitch control, and MP3 or WAV export.</li>
+            <li>Offline speech-to-text with faster-whisper, with language auto-detection.</li>
+            <li>Email and Google sign-in with bcrypt password hashing and JWT tokens.</li>
+            <li>A no-build HTML, CSS and JavaScript frontend, and Docker Compose with Nginx to run it all.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="container section">
+      <p class="eyebrow">How it works</p>
+      <h2 class="detail-h2 reveal">From text to voice, and back again</h2>
+      <p class="muted detail-intro reveal">
+        The browser talks to the backend through an Nginx reverse proxy. Each request carries a JWT, so every result is saved to the right user's history in MongoDB.
+      </p>
+      <div class="pipeline-grid">
+        <div class="pipeline-card reveal">
+          <h3>1 · Text to speech</h3>
+          <ol class="pipe">
+            <li>User writes text in the Studio and picks a voice</li>
+            <li>Speed (0.5× to 2×) and pitch (−10 to +10) are converted to Edge TTS rate and Hz</li>
+            <li>Edge TTS generates the audio as MP3</li>
+            <li>Optional WAV export with pydub and ffmpeg</li>
+            <li>The audio file is returned and the request is saved to history</li>
+          </ol>
+        </div>
+        <div class="pipeline-card reveal">
+          <h3>2 · Speech to text</h3>
+          <ol class="pipe">
+            <li>Record with the microphone or drag in an audio file</li>
+            <li>Backend checks the file is not empty and is under 25 MB</li>
+            <li>faster-whisper transcribes on the CPU with int8 and voice activity detection</li>
+            <li>Language is auto-detected unless the user picks one</li>
+            <li>Text, language and duration are returned and saved</li>
+          </ol>
+        </div>
+        <div class="pipeline-card reveal">
+          <h3>3 · Accounts &amp; history</h3>
+          <ol class="pipe">
+            <li>Register with email and password, or continue with Google</li>
+            <li>Backend issues a JWT that expires after 24 hours</li>
+            <li>Every API route checks the Bearer token</li>
+            <li>History and transcripts are stored per user in MongoDB</li>
+            <li>Search past generations from the History page</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="ai-highlights">
+        <div class="hl reveal"><p class="hl-title">Offline transcription</p><p class="muted small">Whisper runs locally, so audio is never sent to a third-party API. The model downloads once and is reused.</p></div>
+        <div class="hl reveal"><p class="hl-title">Choose speed or accuracy</p><p class="muted small">One setting switches the Whisper model from tiny to large-v3, trading speed for accuracy.</p></div>
+        <div class="hl reveal"><p class="hl-title">Round trip</p><p class="muted small">Copy a transcript, download it as .txt, have it read aloud, or open it in the Studio to turn it back into speech.</p></div>
+        <div class="hl reveal"><p class="hl-title">Developer API</p><p class="muted small">Every feature is a documented REST endpoint, with an API page showing code examples.</p></div>
+      </div>
+    </section>
+
+    <!-- PAGES -->
+    <section class="container section">
+      <p class="eyebrow">Inside the app</p>
+      <div class="feature-grid">
+        <div class="feature reveal"><h3>Landing page</h3><p class="muted small">Marketing page with a live demo of the voices.</p></div>
+        <div class="feature reveal"><h3>Dashboard</h3><p class="muted small">Overview of usage stats with a quick-generate box.</p></div>
+        <div class="feature reveal"><h3>Studio</h3><p class="muted small">Full text-to-speech editor with voice, speed, pitch and format controls.</p></div>
+        <div class="feature reveal"><h3>Speech to text</h3><p class="muted small">Record or upload audio, edit the transcript and see recent transcripts.</p></div>
+        <div class="feature reveal"><h3>History</h3><p class="muted small">Every past generation, searchable and ready to replay.</p></div>
+        <div class="feature reveal"><h3>Voice library</h3><p class="muted small">Browse and preview all 20 voices by language, gender and accent.</p></div>
+        <div class="feature reveal"><h3>Voice cloning</h3><p class="muted small">Interface for the planned Pro voice-cloning feature.</p></div>
+        <div class="feature reveal"><h3>API reference</h3><p class="muted small">API key, endpoint docs and ready-to-copy code examples.</p></div>
+        <div class="feature reveal"><h3>Sign in</h3><p class="muted small">Email and password or Google sign-in on the login and register pages.</p></div>
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section class="container section">
+      <div class="about-card reveal">
+        <div>
+          <p class="eyebrow">Security</p>
+          <h2 class="detail-h2">Accounts that are safe by default.</h2>
+          <p class="muted">Google sign-in tokens are verified on the backend before an account is created or logged in, and secrets stay in an .env file that is never committed.</p>
+        </div>
+        <ul class="check-list">
+          <li>Passwords hashed with bcrypt</li>
+          <li>JWT signed with HS256, 24-hour expiry</li>
+          <li>Google ID token verified on the server</li>
+          <li>One-time nonce checked on Google sign-in</li>
+          <li>Bearer token required on every API route</li>
+          <li>Upload size limit on audio files</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="container section">
+      <p class="eyebrow">Tech stack</p>
+      <div class="skill-groups">
+        <div class="skill-group reveal"><h3>Backend</h3><ul class="tags"><li>Python</li><li>FastAPI</li><li>Uvicorn</li><li>Pydantic</li></ul></div>
+        <div class="skill-group reveal"><h3>Speech AI</h3><ul class="tags"><li>Edge TTS</li><li>faster-whisper</li><li>pydub</li><li>ffmpeg</li></ul></div>
+        <div class="skill-group reveal"><h3>Data</h3><ul class="tags"><li>MongoDB</li><li>PyMongo</li></ul></div>
+        <div class="skill-group reveal"><h3>Auth</h3><ul class="tags"><li>JWT</li><li>bcrypt</li><li>Google OAuth 2.0</li></ul></div>
+        <div class="skill-group reveal"><h3>Frontend</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>MediaRecorder API</li></ul></div>
+        <div class="skill-group reveal"><h3>DevOps</h3><ul class="tags"><li>Docker</li><li>Docker Compose</li><li>Nginx</li></ul></div>
+      </div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="container section contact">
+      <div class="next-card reveal">
+        <div>
+          <p class="eyebrow">Interested in something similar?</p>
+          <h2 class="display contact-title">LET'S BUILD IT <span class="accent">TOGETHER</span></h2>
+        </div>
+        <div class="hero-ctas">
+          <a href="mailto:Tamannagarg1304@gmail.com" class="btn btn-dark">
+            Get in touch
+            <svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+          <a href="../index.html#work" class="btn btn-ghost">See other projects</a>
+        </div>
+      </div>
+      <div class="blob blob-contact"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© <span id="year">2026</span> Tamanna Garg. All rights reserved.</p>
+      <p>Designed &amp; built with intent.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
