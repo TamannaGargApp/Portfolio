@@ -608,3 +608,47 @@ body { transition: background-color .25s, color .25s; }
   .project-track .tts-body { padding: 0.6rem 0.75rem; gap: 0.5rem; }
   .project-track .tts-text { font-size: 0.7rem; padding: 0.45rem 0.55rem; }
 }
+
+/* ===== Editorial blog visual (Life & Tech Journal project) ===== */
+.visual-journal { background: linear-gradient(135deg, var(--mint), var(--flow-end)); display: flex; align-items: center; }
+.lj-window { width: 100%; background: var(--card); border: 1px solid var(--border); border-radius: 0.75rem; box-shadow: var(--shadow-soft); overflow: hidden; }
+.lj-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--border); font-size: 0.7rem; }
+.lj-logo { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 0.85rem; }
+.lj-cats { display: flex; gap: 0.35rem; }
+.lj-cats span { padding: 0.15rem 0.5rem; border-radius: 999px; background: var(--muted); color: var(--muted-foreground); }
+.lj-cats .on { background: var(--ink); color: var(--primary-foreground); }
+.lj-body { padding: 0.9rem; display: grid; gap: 0.7rem; }
+.lj-feature { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.75rem; align-items: center; }
+.lj-thumb { height: 4.5rem; border-radius: 0.5rem; background: linear-gradient(135deg, var(--accent), oklch(0.72 0.14 200)); }
+.lj-tag { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.lj-title { font-family: Georgia, "Times New Roman", serif; font-size: 0.95rem; line-height: 1.25; margin-top: 0.2rem; }
+.lj-meta { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.35rem; font-size: 0.65rem; color: var(--muted-foreground); }
+.lj-meta svg { width: 0.75rem; height: 0.75rem; }
+.lj-list { display: grid; gap: 0.4rem; }
+.lj-row { display: flex; align-items: center; gap: 0.55rem; padding: 0.45rem 0.55rem; border-radius: 0.45rem; background: var(--muted); font-size: 0.7rem; }
+.lj-row b { font-size: 0.58rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tag-fg); white-space: nowrap; }
+.lj-row span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 767px) {
+  .project-track .visual-journal { align-items: center; }
+  .project-track .lj-body { padding: 0.6rem; gap: 0.45rem; }
+  .project-track .lj-thumb { height: 3.5rem; }
+  .project-track .lj-row:nth-child(n+2) { display: none; }
+}
+.roles { display: grid; gap: 0.75rem; margin-top: 1.25rem; }
+.role-row { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.75rem; align-items: baseline; font-size: 0.875rem; }
+.role-row code { font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 999px; background: var(--lavender-soft); color: var(--tag-fg); text-align: center; }
+.lj-window, .lj-feature > div { min-width: 0; }
+@media (max-width: 479px) {
+  .lj-cats span:not(.on) { display: none; }
+}
+@media (max-width: 767px) {
+  .project-track .project-card { grid-template-columns: minmax(0, 1fr); }
+  .project-track .project-card > * { min-width: 0; }
+}
+.visual > * { min-width: 0; }
+.lj-meta { flex-wrap: wrap; row-gap: 0.15rem; }
+.wave { min-width: 0; }
+.tts-body, .lj-body { grid-template-columns: minmax(0, 1fr); }
+.lj-feature { grid-template-columns: 5.5rem minmax(0, 1fr); }
+@media (max-width: 479px) { .lj-feature { grid-template-columns: 4rem minmax(0, 1fr); } }
+.lj-row span { min-width: 0; }

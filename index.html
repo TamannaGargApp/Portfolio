@@ -286,21 +286,42 @@
       <!-- Project 04 -->
       <article class="project-card">
         <div>
-          <p class="eyebrow">Side project</p>
-          <h2 class="project-title">Life Tech Journal</h2>
+          <p class="eyebrow">Full-stack web app</p>
+          <h2 class="project-title">Life &amp; Tech Journal</h2>
+          <p class="project-sub">Editorial blogging platform with a built-in CMS</p>
           <p class="muted">
-            An AI-enhanced blogging platform with an intelligent admin portal. Built with Llama LLM and Nomic-Embed-Text for content generation, semantic search and recommendations.
+            A full-stack blog for stories on life and technology. Readers can like, bookmark and keep a reading list, authors write and edit their own articles, and admins manage everything from a CMS dashboard. Built with Next.js 15 and a FastAPI backend, with MongoDB, Redis caching, JWT and Google sign-in, and image storage on AWS S3 with CloudFront.
           </p>
           <ul class="tags">
-            <li>Llama</li><li>Nomic Embed</li><li>Semantic Search</li>
+            <li>Next.js 15</li><li>TypeScript</li><li>Tailwind CSS</li><li>FastAPI</li><li>MongoDB</li><li>Redis</li><li>AWS S3</li>
           </ul>
           <div class="project-links">
-            <!-- Replace with this project's repository URL -->
-            <a href="https://github.com/TamannaGargApp" target="_blank" rel="noopener" class="btn btn-ghost"><svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> GitHub</a>
+            <a href="projects/life-tech-journal.html" class="btn btn-dark">View details <svg class="icon" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+            <!-- Update if the repository name is different -->
+            <a href="https://github.com/TamannaGargApp/life-tech-journal" target="_blank" rel="noopener" class="btn btn-ghost"><svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> GitHub</a>
           </div>
         </div>
         <div class="project-media">
-          <img src="assets/project-life-tech.jpg" alt="Life Tech Journal" width="1200" height="800" loading="lazy" />
+          <div class="visual visual-journal" aria-hidden="true">
+            <div class="lj-window">
+              <div class="lj-nav"><span class="lj-logo">Life &amp; Tech Journal</span><span class="lj-cats"><span class="on">All</span><span>Life</span><span>Technology</span></span></div>
+              <div class="lj-body">
+                <div class="lj-feature">
+                  <div class="lj-thumb"></div>
+                  <div>
+                    <p class="lj-tag">Featured · AI &amp; ML</p>
+                    <p class="lj-title">Stories that inspire. Technology that empowers.</p>
+                    <p class="lj-meta"><span>5 min read</span><svg class="icon" viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg><span>128</span><svg class="icon" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg><span>Saved</span></p>
+                  </div>
+                </div>
+                <div class="lj-list">
+                  <div class="lj-row"><b>Career</b><span>Building a habit of learning every day</span></div>
+                  <div class="lj-row"><b>Cloud</b><span>A beginner's map of cloud computing</span></div>
+                  <div class="lj-row"><b>Productivity</b><span>Deep work in a distracted world</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <span class="project-num">04</span>
       </article>
